@@ -1,9 +1,10 @@
 ---
 layout: ../../layouts/BlogBaseLayout.astro
-title: "Hello, World!"
+title: "post-2"
 date: "09 Aug 2022"
 ---
-所有的 frontmatter 属性都可以作为 Astro 布局组件的 props。11
+post-2
+所有的 frontmatter 属性都可以作为 Astro 布局组件的 props。
 
 `layout` 属性是 Astro 提供的唯一一个特殊属性。
 
