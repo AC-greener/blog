@@ -1,0 +1,26 @@
+---
+type Props = {
+  // 在这里定义 frontmatter 属性
+  title: string;
+  url: string;
+//   author: string;
+//   date: string;
+};
+
+// 现在，`frontmatter`、`url` 和其他 Markdown 布局属性
+// 可以通过 TypeScript 类型安全地访问
+console.log(111, Astro.props);
+console.log(Astro.site);
+
+const { url, title } = Astro.props;
+---
+
+<html>
+  <head>
+    <link rel="canonical" href={new URL(url, Astro.site).pathname} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
