@@ -1,4 +1,5 @@
 ---
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 type Props = {
   // 在这里定义 frontmatter 属性
   title: string;
@@ -22,5 +23,6 @@ const { url, title } = Astro.props;
   </head>
   <body>
     <slot />
+    <SpeedInsights/>
   </body>
 </html>
