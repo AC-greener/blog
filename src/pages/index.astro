@@ -1,9 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Greeting from '../components/Greeting';
+
 ---
 
 <Layout title="Welcome to Astro.">
 	<h1>首页</h1>
+	<Greeting client:load messages={["Hi", "Hello", "Howdy", "Hey there"]} />
 </Layout>
 
 <style></style>
