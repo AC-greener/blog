@@ -1,7 +1,8 @@
 ---
-layout: ../../layouts/BlogBaseLayout.astro
-title: "post-2"
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "Js入门"
 date: "09 Aug 2022"
+tags: ["blogging"]
 ---
 post-2
 所有的 frontmatter 属性都可以作为 Astro 布局组件的 props。
