@@ -1,6 +1,8 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    // "module": "esnext", // 或者 "esnext"，取决于你的项目设置
+    "moduleResolution": "node",
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   }

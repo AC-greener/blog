@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Js入门"
-date: "09 Aug 2022"
+date: "20240421"
 tags: ["blogging"]
 ---
 post-2

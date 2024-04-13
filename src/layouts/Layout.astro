@@ -1,13 +1,12 @@
 ---
-import Header from "../components/Header.jsx";
-// import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+import Header from "../components/Header/Header.jsx";
+import "../styles/global.less";
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 interface Props {
-  title: string;
+  pageTitle: string;
 }
 
-const { title } = Astro.props;
+const { pageTitle } = Astro.props;
 ---
 
 <!doctype html>
@@ -18,7 +17,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
     <Header />
@@ -26,10 +25,5 @@ const { title } = Astro.props;
     <!-- <Footer /> -->
     <SpeedInsights/>
   </body>
-  <script>
-    document.querySelector(".hamburger")!.addEventListener("click", () => {
-      document.querySelector(".nav-links")!.classList.toggle("expanded");
-    });
-  </script>
 </html>
 <style is:global></style>

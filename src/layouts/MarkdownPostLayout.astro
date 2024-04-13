@@ -1,11 +1,11 @@
 ---
-import MarkdownLayout from './Layout.astro';
+import Layout from './Layout.astro';
 const { frontmatter } = Astro.props;
 ---
-<MarkdownLayout url={frontmatter.url} title={frontmatter.title}>
+<Layout pageTitle={frontmatter.title}>
   <h1>{frontmatter.title}</h1>
   <h3>{frontmatter.date}</h3>
   {frontmatter.image && <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />}
 
   <slot />
-</MarkdownLayout>
+</Layout>

@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: '我的第一篇博客文章 Astro入门'
-date: "09 Aug 2024"
+date: "20240421"
 description: '这是我 Astro 博客的第一篇文章。'
 author: 'Astro 学习者'
 
