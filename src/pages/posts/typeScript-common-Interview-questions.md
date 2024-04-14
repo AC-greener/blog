@@ -1,11 +1,11 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/Blog.astro
 title: "TypeScript常见面试题"
 date: "20230509"
 tags: ["blogging"]
 ---
 
-# **TypeScript 相对于 JavaScript 的优势是什么？**
+## **TypeScript 相对于 JavaScript 的优势是什么？**
 
 TypeScript 是一种由 Microsoft 开发的编程语言，它在 JavaScript 的基础上添加了静态类型和其他一些特性，包括类、接口、枚举等。相比于 JavaScript，TypeScript 有以下几个优势：
 
@@ -87,9 +87,9 @@ interface User {
 
 /*
 User 接口为 {
-name: string
-age: number
-sex: string
+  name: string
+  age: number
+  sex: string
 }
 */
 

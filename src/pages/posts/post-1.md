@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/Blog.astro
 title: '我的第一篇博客文章 Astro入门'
 date: "20240421"
 description: '这是我 Astro 博客的第一篇文章。'

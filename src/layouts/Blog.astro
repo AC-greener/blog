@@ -1,0 +1,22 @@
+---
+import Layout from "./Layout.astro";
+const { frontmatter } = Astro.props;
+import { formatDate } from "../utils/index";
+---
+
+<Layout pageTitle={frontmatter.title}>
+  <article class="prose mx-auto px-4 lg:px-0 my-12 lg:my-12 max-w-none">
+    <h1>{frontmatter.title}</h1>
+    <div class="post-date">{formatDate(frontmatter.date)}</div>
+    {
+      frontmatter.image && (
+        <img
+          src={frontmatter.image.url}
+          width="300"
+          alt={frontmatter.image.alt}
+        />
+      )
+    }
+  <slot />
+</article>
+</Layout>

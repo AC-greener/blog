@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
+layout: ../../layouts/Blog.astro
 title: "Js入门"
 date: "20240421"
 tags: ["blogging"]
