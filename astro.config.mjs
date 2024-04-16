@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.yourwebsite.com',
+  site: 'https://www.zhutongtong.cn',
   output: 'server',
   adapter: vercel({
     webAnalytics: {
