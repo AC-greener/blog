@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header/Header.jsx";
 import "../styles/global.less";
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+import SpeedInsights from "@vercel/speed-insights/astro";
 
 const { pageTitle } = Astro.props;
 ---
@@ -15,11 +15,20 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?ede26455936c86e9ca96f051b0734ab9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
   </head>
   <body>
     <Header />
     <slot />
     <!-- <Footer /> -->
-    <SpeedInsights/>
+    <SpeedInsights />
   </body>
 </html>
