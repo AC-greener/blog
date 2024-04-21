@@ -198,7 +198,7 @@ jwt.sign(payload, secretOrPrivateKey, [options, callback])
 
 然后使用curl请求该路由，响应内容如下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522241317131910531713191053749unnvGS.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522241317131910531713191053749unnvGS.png)
 
 ### 4，创建isLogin中间件
 
@@ -239,7 +239,7 @@ app.get("/user/:username", isLogin, async (req, res) => {
 
 然后使用curl请求该路由，就能拿到用户信息：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522241517131910551713191055007sJ1Ok3.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522241517131910551713191055007sJ1Ok3.png)
 
 ### 6，使用axios携带token请求用户信息
 

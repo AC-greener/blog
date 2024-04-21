@@ -77,7 +77,7 @@ app.listen(3000, () => {
 
 `$ curl -i localhost:3000`
 
-![Untitled](http://nodejsbyexample.cn/uPic/xCfZXkUntitled.png)
+![Untitled](http://static.zhutongtong.cn/uPic/xCfZXkUntitled.png)
 
 ## 设置cookie的属性
 
@@ -93,7 +93,7 @@ app.use(session({
 }))
 ```
 
-![Untitled](http://nodejsbyexample.cn/uPic/qPLqtCUntitled%201.png)
+![Untitled](http://static.zhutongtong.cn/uPic/qPLqtCUntitled%201.png)
 
 还可以配置cookie的其他属性，如maxAge，secure等
 
@@ -108,7 +108,7 @@ app.use(session({
 }))
 ```
 
-![Untitled](http://nodejsbyexample.cn/uPic/hbfdUAUntitled%202.png)
+![Untitled](http://static.zhutongtong.cn/uPic/hbfdUAUntitled%202.png)
 
 ## 使用session记录页面访问次数
 
@@ -132,7 +132,7 @@ app.get('/', function (req, res, next) {
 
  `$ curl -i localhost:3000`
 
-![Untitled](http://nodejsbyexample.cn/uPic/GfzN26Untitled%203.png)
+![Untitled](http://static.zhutongtong.cn/uPic/GfzN26Untitled%203.png)
 
 可以看到，响应的是'welcome to the session demo. please curl again!'
 
@@ -140,7 +140,7 @@ app.get('/', function (req, res, next) {
 
 `$ curl -i -b "mycookie=s%3A_lsIhF-wH-IwuiUBeKcpqq_KIv1JVfFW.PVY28Bj0DhABROPOZM9h%2BY4gcbb7MVEyYqMu8lH73LI" localhost:3000`
 
-![Untitled](http://nodejsbyexample.cn/uPic/pwcMbTUntitled%204.png)
+![Untitled](http://static.zhutongtong.cn/uPic/pwcMbTUntitled%204.png)
 
 再次请求之后会响应用户访问的次数
 
@@ -150,7 +150,7 @@ app.get('/', function (req, res, next) {
 
 登录页面是这样的：
 
-![Untitled](http://nodejsbyexample.cn/uPic/JVmXrYUntitled%205.png)
+![Untitled](http://static.zhutongtong.cn/uPic/JVmXrYUntitled%205.png)
 
 login.html代码如下：
 
@@ -277,11 +277,11 @@ app.post('/login', (req, res) => {
 
 输入用户名和密码登录之后可以看到登录成功，并且有了cookie，再次刷新页面，还会显示登录成功的页面，因为用户的信息已经被放在session里面
 
-![Untitled](http://nodejsbyexample.cn/uPic/OpvyGnUntitled%206.png)
+![Untitled](http://static.zhutongtong.cn/uPic/OpvyGnUntitled%206.png)
 
 然后会到命令行可以看到打印的session如下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/N1KOsqUntitled%207.png)
+![Untitled](http://static.zhutongtong.cn/uPic/N1KOsqUntitled%207.png)
 
 ### 实现/logout退出接口
 

@@ -128,7 +128,7 @@ Worker Started 33938
 
 fork的过程如下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522262417131911841713191184709Zk0pPZ.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522262417131911841713191184709Zk0pPZ.png)
 
 ## 压测Cluster
 

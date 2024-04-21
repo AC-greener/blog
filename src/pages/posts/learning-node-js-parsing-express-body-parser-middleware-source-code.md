@@ -41,7 +41,7 @@ app.listen(3000, () => {
 
 打印的结果如下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183117131907111713190711928Fm3sqw.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183117131907111713190711928Fm3sqw.png)
 
 ### 使用body-parser处理urlencoded类型的请求体
 
@@ -64,7 +64,7 @@ app.post('/api/data', (req, res) => {
 
 结果如下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183217131907121713190712912pyb9g2.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183217131907121713190712912pyb9g2.png)
 
 ## 使用Nodejs实现body-parser
 
@@ -92,7 +92,7 @@ server.listen(port, () => {
 
 我们首先需要知道json和urlencoded请求对应的content-type，使用curl请求这个服务器可以得到：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183317131907131713190713434KsG8G7.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183317131907131713190713434KsG8G7.png)
 
 ### 处理json格式请求
 
@@ -139,7 +139,7 @@ const server = http.createServer((req, res) => {
 
 可以看到日志如下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183317131907131713190713917ABL0rF.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183317131907131713190713917ABL0rF.png)
 
 ### 处理urlencoded格式请求
 
@@ -177,7 +177,7 @@ if (contentType === "application/json") {
 
 可以看到日志如下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183417131907141713190714354QJuQNO.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183417131907141713190714354QJuQNO.png)
 
 ## 提取重复的代码
 
@@ -219,7 +219,7 @@ if (contentType === "application/json") {
 
 使用curl重新请求，仍然可以成功响应
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183417131907141713190714863nraYzC.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183417131907141713190714863nraYzC.png)
 
 接下来我们一起看一下body-parser是如何解析这几种请求格式的～
 
@@ -231,7 +231,7 @@ if (contentType === "application/json") {
 
 body-parser目录结构如下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183517131907151713190715382C1V8o0.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183517131907151713190715382C1V8o0.png)
 
 index.js主要作用就是引入lib目录下面的文件，然后导出去
 
@@ -253,13 +253,13 @@ test目录是测试相关的代码
 
 index.js是 `body-parser` 模块的入口文件，主要用于导出各种请求主体解析器
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183617131907161713190716120eR8Ika.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183617131907161713190716120eR8Ika.png)
 
 37行导出了一个函数 `bodyParser`，然后从47行开始使用 `Object.defineProperty` 定义了四个属性（`json`、`raw`、`text`、`urlencoded`），这些属性分别对应四种解析器
 
 `loadParser`函数就是去引入这四种解析器，代码如下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183617131907161713190716866deo5qB.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183617131907161713190716866deo5qB.png)
 
 index.js内容比较简单，下面我们来看下json格式的请求体是如何解析的
 
@@ -267,7 +267,7 @@ index.js内容比较简单，下面我们来看下json格式的请求体是如�
 
 json.js 用于处理 JSON 请求主体的中间件，它会解析请求主体，验证内容类型和字符集，最后会吧结果存储在 `req.body` 中
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183717131907171713190717524n87Hig.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183717131907171713190717524n87Hig.png)
 
 1. 首先是导入所需的模块，比较关键的有：`content-type`（用于处理请求的内容类型）、`read`（lib目录下读取请求主体的函数）。
 2. 26行导出了 `json` 中间件函数，用于处理 JSON 请求主体。`json`中间件函数接受一个配置作为参数，重点的配置项如下：
@@ -277,7 +277,7 @@ json.js 用于处理 JSON 请求主体的中间件，它会解析请求主体，
 
 重点是`json`函数，我们来看一下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183817131907181713190718812OuRR5i.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183817131907181713190718812OuRR5i.png)
 
 1. 初始化一些配置项
 2. 第2部分是parse函数，核心代码是第89行，用`JSON.parse`来解析body内容
@@ -285,7 +285,7 @@ json.js 用于处理 JSON 请求主体的中间件，它会解析请求主体，
 
 read.js主要内容如下：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522183917131907191713190719753RNIcSD.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522183917131907191713190719753RNIcSD.png)
 
 1. read.js引入了好几个模块。比较重要的是raw-body模块，`raw-body` 是一个用于处理请求主体的库。主要作用是从请求流中读取原始的请求主体数据，但是不进行解析或处理，方便用户自行处理请求主体数据
 2. 47行会吧`req._body`标记为true，表示已经解析过请求体了，比如我们使用了两个中间件：
@@ -299,7 +299,7 @@ read.js主要内容如下：
     
 3. 调用`contenstream`函数解压缩请求体，`contenstream`会根据请求体的编码进行解压缩，并返回解压缩之后stream
    
-    ![Untitled](http://nodejsbyexample.cn/uPic/2024041522184017131907201713190720624kDVMIx.png)
+    ![Untitled](http://static.zhutongtong.cn/uPic/2024041522184017131907201713190720624kDVMIx.png)
     
 4. getbody就是从请求流中读取原始的请求主体数据，然后在回调函数的第二个参数返回内容
 5. 129行比较关键，会调用json.js里面传过来的parse函数进行解析，并吧结果存储在 `req.body` 中。
@@ -309,12 +309,12 @@ read.js主要内容如下：
 
 urlencoded.js文件和json.js大部分内容都比较类似，不同的地方是如何解析请求体，核心代码是`urlencoded`这个函数：
 
-![Untitled](http://nodejsbyexample.cn/uPic/2024041522184117131907211713190721334ro9peM.png)
+![Untitled](http://static.zhutongtong.cn/uPic/2024041522184117131907211713190721334ro9peM.png)
 
 1. 通过判断配置中的extended参数来判断使用那个解析器，`simpleparser`内部使用的Nodejs内置的`querystring`模块，而`extendedparser`使用的是第三方的`qs`模块来解析，qs模块功能要更加强大一些
 
    
-    ![Untitled](http://nodejsbyexample.cn/uPic/2024041522184217131907221713190722329KZAOYk.png)
+    ![Untitled](http://static.zhutongtong.cn/uPic/2024041522184217131907221713190722329KZAOYk.png)
     
 2. parse函数，内部调用queryparse函数去解析请求体
 
