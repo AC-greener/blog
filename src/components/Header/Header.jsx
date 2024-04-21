@@ -7,7 +7,7 @@ export default function Header() {
           <a href="/">Home</a>
           {/* <!-- <a href="/about">关于</a> --> */}
           {/* <a href="/blog">blog</a> */}
-          <a href="/tags/astro">Tag</a>
+          {/* <a href="/tags/astro">Tag</a> */}
         </div>
       </nav>
     </header>

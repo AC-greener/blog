@@ -7,7 +7,11 @@ const postList = allPosts.map(item => ({
   ...item.frontmatter,
   url: item.url
 }))
-console.log(postList, allPosts[0].url)
+// 对 postList 按日期排序
+postList.sort((a, b) => {
+  // 由于是 YYYYMMDD 的格式，直接比较字符串即可，若需要降序请颠倒 a 和 b 的位置
+  return a.date > b.date ? -1 : a.date < b.date ? 1 : 0;
+});
 
 ---
 
