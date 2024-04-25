@@ -96,7 +96,7 @@ https://cdn.com/wifi/segment3.ts
 ```
 
 ## MSE：MediaSource Extenstion
-媒体源扩展API(通常简称为MSE)是来自 W3C 的一个规范，目前大多数浏览器都实现了这个规范。MSE实现了基于 Web 的流媒体功能。使用 MSE，媒体流能够通过 JavaScript 创建，并且能通过使用 [<audio>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/audio) 和 [<video>](https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/video) 元素进行播放。
+媒体源扩展API(通常简称为MSE)是来自 W3C 的一个规范，目前大多数浏览器都实现了这个规范。MSE实现了基于 Web 的流媒体功能。使用 MSE，媒体流能够通过 JavaScript 创建，并且能通过使用 `<audio>`和 `<video>`元素进行播放。
 
 Video 、 MediaSource、 SourceBuffers 和实际数据之间的关系：
 ![image.png](https://static.zhutongtong.cn/uPic/20240425152357171402983717140298379621666700835241-fc2fc198-bea1-4563-adc6-6cf319d7a2af.png)
