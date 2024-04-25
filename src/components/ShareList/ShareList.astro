@@ -1,0 +1,28 @@
+---
+// 引入全局样式
+import "../BlogList/BlogList.less";
+import {formatDate} from '../../utils/index'
+const allPosts = await Astro.glob('../../pages/share/*.md');
+const postList = allPosts.map(item => ({
+  ...item.frontmatter,
+  url: item.url
+}))
+// 对 postList 按日期排序
+postList.sort((a, b) => {
+  // 由于是 YYYYMMDD 的格式，直接比较字符串即可，若需要降序请颠倒 a 和 b 的位置
+  return a.date > b.date ? -1 : a.date < b.date ? 1 : 0;
+});
+
+---
+
+<div class="blog-title">Share</div>
+<div class="blog-list">
+  {postList.map((item, index) => (
+    <div key={index} class="blog-post">
+      <a href={item.url}>
+        {item.title}
+        <span class="post-date"> {formatDate(item.date)}</span>
+      </a>
+    </div>
+  ))}
+</div>
