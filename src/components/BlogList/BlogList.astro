@@ -17,8 +17,8 @@ postList.sort((a, b) => {
 
 <div class="blog-title">Blog</div>
 <div class="blog-list">
-  {postList.map((item, index) => (
-    <div key={index} class="blog-post">
+  {postList.map((item) => (
+    <div class="blog-post">
       <a href={item.url}>
         {item.title}
         <span class="post-date"> {formatDate(item.date)}</span>

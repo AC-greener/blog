@@ -2,8 +2,8 @@
 // 引入全局样式
 import "../BlogList/BlogList.less";
 import {formatDate} from '../../utils/index'
-const allPosts = await Astro.glob('../../pages/share/*.md');
-const postList = allPosts.map(item => ({
+const allPosts = await Astro.glob('../../pages/til/*.md');
+const postList = allPosts.map((item) => ({
   ...item.frontmatter,
   url: item.url
 }))
@@ -15,7 +15,7 @@ postList.sort((a, b) => {
 
 ---
 
-<div class="blog-title">Share</div>
+<div class="blog-title">Til</div>
 <div class="blog-list">
   {postList.map((item) => (
     <div class="blog-post">
