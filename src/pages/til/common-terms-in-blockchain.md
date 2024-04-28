@@ -1,3 +1,9 @@
+---
+layout: ../../layouts/Blog.astro
+title: "区块链常见术语"
+date: "20240428"
+tags: ["blockchain"]
+---
 
 
 在学习Web3 和区块链过程中，发现接触到的术语和概念有点多，这里汇总一下：
