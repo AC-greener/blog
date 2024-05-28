@@ -13,7 +13,7 @@ tags: ["Solidity"]
 pragma solidity ^0.8.19;
 
 contract Simple {
-		// 数组可以在声明时指定长度，也可以动态调整大小
+	// 数组可以在声明时指定长度，也可以动态调整大小
     // 定义一个长度为2的数组
     string[2] fruit = ["apple", "mango"];
     
@@ -34,7 +34,7 @@ contract Simple {
     Person public rita = Person("rita", 3);
 
     Person[] public listOfPeople;
-		// memory 关键字表示_name是在内存中存储, 函数调用完毕之后，变量会被销毁
+	// memory 关键字表示_name是在内存中存储, 函数调用完毕之后，变量会被销毁
     function addPerson(string memory _name, int256 _favoriteNumber) public {
         listOfPeople.push(Person(_name, _favoriteNumber));
     }
