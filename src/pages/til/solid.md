@@ -42,14 +42,7 @@ contract Simple {
 pragma solidity ^0.8.19;
 
 contract Simple {
-    bool flag = true;
-    int256 number = -256;
     uint256 x = 256;
-    string y = "hello";
-    bytes z = "cat";
-    bytes32 i = "cat2"
-    address add = 0x6be8C472C200D89b06C56013F3BCbD2FE91b966e;
-    
     //public关键字表示函数可以被任何人调用，包括外部账户和其他合约。
     function store(uint256 _x) public {
         x = _x;
