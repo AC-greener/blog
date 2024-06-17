@@ -31,7 +31,7 @@ a new terminal session to use Foundry
 
 运行`forge --version`
 
-![image-20240617222828775](http://nodejsbyexample.cn/uPic/2024061722283217186345121718634512233nCarjd.png)
+![image-20240617222828775](http://static.zhutongtong.cn/uPic/2024061722283217186345121718634512233nCarjd.png)
 
 看到版本号就说明安装成功了
 
@@ -41,7 +41,7 @@ a new terminal session to use Foundry
 
 运行之后得到的目录结构如：
 
-![image-20240617223911534](http://nodejsbyexample.cn/uPic/2024061722391317186351531718635153522bhLHT6.png)
+![image-20240617223911534](http://static.zhutongtong.cn/uPic/2024061722391317186351531718635153522bhLHT6.png)
 
 其中src目录包含一个示例的Counter智能合约
 
@@ -53,7 +53,7 @@ a new terminal session to use Foundry
 
 编译完成之后会产生一个output文件夹，output里面会包含合约的ABI等信息
 
-![image-20240616211838851](http://nodejsbyexample.cn/uPic/2024061621184317185439231718543923061Y10jSO.png)
+![image-20240616211838851](http://static.zhutongtong.cn/uPic/2024061621184317185439231718543923061Y10jSO.png)
 
 
 
@@ -67,7 +67,7 @@ Foundry内置的anvil可以创建一个本地节点用于部署智能合约
 
 启动之后会给我们几个账户和私钥：
 
-![image-20240616212429963](http://nodejsbyexample.cn/uPic/2024061621254517185443451718544345236ABw4Bp.png)
+![image-20240616212429963](http://static.zhutongtong.cn/uPic/2024061621254517185443451718544345236ABw4Bp.png)
 
 在启动anvil之后可以看到rpc-url和private-key，下一步会用到：
 
@@ -91,8 +91,8 @@ Foundry内置的anvil可以创建一个本地节点用于部署智能合约
 
 我们使用setNumber设置一下number：
 
-![image-20240616223721190](http://nodejsbyexample.cn/uPic/2024061622462317185491831718549183545Z4s8wD.png)
+![image-20240616223721190](http://static.zhutongtong.cn/uPic/2024061622462317185491831718549183545Z4s8wD.png)
 
 获取number:
 
-![image-20240616224625776](http://nodejsbyexample.cn/uPic/2024061622462717185491871718549187468vqtaJP.png)
+![image-20240616224625776](http://static.zhutongtong.cn/uPic/2024061622462717185491871718549187468vqtaJP.png)
