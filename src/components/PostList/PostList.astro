@@ -1,0 +1,35 @@
+---
+import { formatDate } from '../../utils/index';
+
+export const getStaticPaths = async () => {
+  const allPosts = await Astro.glob('../../pages/posts/*.md');
+  const allShares = await Astro.glob('../../pages/share/*.md');
+  return [
+    { params: { type: 'posts' }, props: { items: allPosts } },
+    { params: { type: 'shares' }, props: { items: allShares } },
+  ];
+};
+
+const { items, title } = Astro.props;
+const postList = items.map(item => ({
+  ...item.frontmatter,
+  url: item.url
+}));
+// 对 postList 按日期排序
+postList.sort((a, b) => {
+  // 由于是 YYYYMMDD 的格式，直接比较字符串即可，若需要降序请颠倒 a 和 b 的位置
+  return a.date > b.date ? -1 : a.date < b.date ? 1 : 0;
+});
+---
+
+<div class="mb-8 mt-4 text-neutral-600 font-bold text-3xl">{title}</div>
+<div>
+  {postList.map((item) => (
+    <div class="mb-2">
+      <a class="text-lg text-neutral-600/80 hover:text-neutral-600" href={item.url}>
+        {item.title}
+        <span class="text-sm ml-2 text-neutral-600/50"> {formatDate(item.date)}</span>
+      </a>
+    </div>
+  ))}
+</div>
