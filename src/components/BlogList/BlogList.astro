@@ -1,6 +1,4 @@
 ---
-// 引入全局样式
-import "./BlogList.less";
 import {formatDate} from '../../utils/index'
 const allPosts = await Astro.glob('../../pages/posts/*.md');
 const postList = allPosts.map(item => ({
@@ -15,13 +13,13 @@ postList.sort((a, b) => {
 
 ---
 
-<div class="blog-title">Blog</div>
+<div class="mb-8 mt-4 text-neutral-600 font-bold text-3xl">Blog</div>
 <div class="blog-list">
   {postList.map((item) => (
-    <div class="blog-post">
-      <a href={item.url}>
+    <div class="mb-2">
+      <a class="text-lg text-neutral-600/80 hover:text-neutral-600" href={item.url}>
         {item.title}
-        <span class="post-date"> {formatDate(item.date)}</span>
+        <span class="post-date text-sm ml-2 text-neutral-600/50"> {formatDate(item.date)}</span>
       </a>
     </div>
   ))}
