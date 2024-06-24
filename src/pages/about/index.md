@@ -6,6 +6,6 @@ layout: ../../layouts/About.astro
 
 有两只非常可爱的猫，想要开着房车去环游世界，先环游中国吧:)
 
-![image-20240624231219860](http://static.zhutongtong.cn/uPic/20240624fjY47n.png)
+![Snipaste_2024-06-24_23-21-33 (1)](http://static.zhutongtong.cn/uPic/20240624mEb36I.jpg)
 
-![image-20240624225813121](http://static.zhutongtong.cn/uPic/20240624S72t32.png)
+![Snipaste_2024-06-24_23-21-49 (1)](http://static.zhutongtong.cn/uPic/20240624Oq0kFN.jpg)
