@@ -9,7 +9,7 @@ tags: ["hls"]
 ## HLS是什么
 HLS ([HTTP Live Streaming](https://developer.apple.com/streaming/)) 是 Apple 提出的直播流协议，它诞生于2009年，它的工作原理是把一段视频流切分成一个个的小块，一次传输一小部分，并基于 HTTP 的文件来下载。当媒体流正在播放时，客户端可以根据当前网络环境，方便地在不同的码率流中做切换，以实现更好的观影体验。
 下图是苹果官方给出的大体流程图：
-![image.png](https://static.zhutongtong.cn/uPic/20240425152125171402968517140296854691661951450629-3fc6acd0-381e-4f1a-b6a9-0918f5de9bfb.png)
+![image.png](http://static.zhutongtong.cn/uPic/20240425152125171402968517140296854691661951450629-3fc6acd0-381e-4f1a-b6a9-0918f5de9bfb.png)
 Server部分接受音视频输入并对其进行编码，将该流分割成一系列短的媒体文件，放在服务器上，还会创建并维护一个包含媒体文件列表的索引文件也就是index file。
 客户端读取索引文件，然后按顺序请求列出的媒体文件。每个文件都包含流的一个连续片段。一旦下载了足够的数据，客户端就开始播放视频。
 
@@ -32,7 +32,7 @@ m3u8 文件只是存放了一些 ts 文件的配置信息和相关路径，当�
 
 
 这张图片显示了索引文件（master.m3u8）是如何构建的：
-![image.png](https://static.zhutongtong.cn/uPic/20240425152137171402969717140296979551665712621273-8a4a57ed-eca6-4070-94c2-1a2b45b6067e.png)
+![image.png](http://static.zhutongtong.cn/uPic/20240425152137171402969717140296979551665712621273-8a4a57ed-eca6-4070-94c2-1a2b45b6067e.png)
 
 
 
@@ -99,7 +99,7 @@ https://cdn.com/wifi/segment3.ts
 媒体源扩展API(通常简称为MSE)是来自 W3C 的一个规范，目前大多数浏览器都实现了这个规范。MSE实现了基于 Web 的流媒体功能。使用 MSE，媒体流能够通过 JavaScript 创建，并且能通过使用 `<audio>`和 `<video>`元素进行播放。
 
 Video 、 MediaSource、 SourceBuffers 和实际数据之间的关系：
-![image.png](https://static.zhutongtong.cn/uPic/20240425152357171402983717140298379621666700835241-fc2fc198-bea1-4563-adc6-6cf319d7a2af.png)
+![image.png](http://static.zhutongtong.cn/uPic/20240425152357171402983717140298379621666700835241-fc2fc198-bea1-4563-adc6-6cf319d7a2af.png)
 
 
 
@@ -177,7 +177,7 @@ fetchSegment("http://server.com/video/segment0.ts")
 hls.js是基于Http Live Stream协议开发，利用Media Source Extension，用于实现HLS在web上播放的一款js播放库。
 
 核心原理：
-![image.png](https://static.zhutongtong.cn/uPic/20240425152207171402972717140297275381666789085355-dce35e3e-88f6-4e35-962a-ba0ec8cdf78e.png)
+![image.png](http://static.zhutongtong.cn/uPic/20240425152207171402972717140297275381666789085355-dce35e3e-88f6-4e35-962a-ba0ec8cdf78e.png)
 
 - hls.js会先通过loader去拉取.m3u8文件，通过文本正则匹配获取子m3u8文件或者ts地址
 - 获取到ts地址后，然后再进行二进制读取，将ts格式中的视频流、音频流进行解封装

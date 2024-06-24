@@ -28,7 +28,7 @@ uint256 public constant MINIMUM_USD = 5 * 10 ** 18;
 
 `require(msg.value >= 5 * 10e18, "You need to spend more ETH!");`
 
-![image-20240604163058130](https://static.zhutongtong.cn/uPic/2024060416310117174898611717489861438image-20240604163058130.png)
+![image-20240604163058130](http://static.zhutongtong.cn/uPic/2024060416310117174898611717489861438image-20240604163058130.png)
 
 ### revert
 
@@ -53,7 +53,7 @@ contract Test {
 
 执行sendMoney函数时，value会加1变成2，发送的金额不足一个以太币时，revert操作会恢复value为初始值1
 
-![image-20240604163758476](https://static.zhutongtong.cn/uPic/2024060416380117174902811717490281027image-20240604163758476.png)
+![image-20240604163758476](http://static.zhutongtong.cn/uPic/2024060416380117174902811717490281027image-20240604163758476.png)
 
 ### 函数修饰符 Function Modifier 
 
