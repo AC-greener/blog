@@ -43,11 +43,11 @@ export default App() {
 }
 ```
 
-上面示例中， `requestUsername` 是传递给 `<form>` 的Server Action。当用户提交此表单时，会向服务端的 `requestUsername` 发起网络请求。当在表单中调用服务器操作时，React 将提供表单的 `FormData` 作为Server Action函数的第一个参数。
+上面示例中， `requestUsername` 是传递给 `<form>` 的Server Actions。当用户提交此表单时，会向服务端的 `requestUsername` 发起网络请求。当在表单中调用服务器操作时，React 将提供表单的 `FormData` 作为Server Actions函数的第一个参数。
 
-## **表单之外的Server Action**
+## **表单之外的Server Action**s
 
-当在表单之外使用**Server Action**时，可以在`startTransition`调用**Server Action**操作，可以根据`isPending`的状态显示loading或者其他效果。
+当在表单之外使用Server Action时，可以用`startTransition` Hooks调用Server Actions操作，根据`isPending`的状态显示loading或者其他效果。
 
 以下是表单之外的服务器操作的示例：
 
@@ -75,7 +75,6 @@ function LikeButton() {
 
   const onClick = () => {
     startTransition(async () => {
-      // To read a server action return value, we await the promise returned.
       const currentCount = await incrementLike();
       setLikeCount(currentCount);
     });
@@ -92,9 +91,9 @@ function LikeButton() {
 }
 ```
 
-## **Server Action 和 useActionState**
+## **Server Actions 和 useActionState**
 
-对于只需要访问pending状态和response响应状态，可以使用 `useActionState` Hooks结合Server Action一起使用：
+对于只需要访问pending状态和response响应状态，可以使用 `useActionState` Hooks结合Server Actions一起使用：
 
 ```jsx
 "use client";
