@@ -1,15 +1,9 @@
-# 高效实现React服务器端渲染：从renderToString到renderToPipeableStream
-
-Published: July 12, 2024
-AI summary: 本文介绍了React服务器端渲染（SSR）的概念和优势。客户端渲染（CSR）存在一些局限性，如SEO和性能问题。然后介绍了SSR的概念和示例，以及使用renderToPipeableStream进行非阻塞渲染的优势。最后提到了使用框架如Next.js或Nuxt.js可以更方便地进行服务器端渲染。
-
-```
+---
 layout: ../../layouts/Blog.astro
 title: "高效实现React服务器端渲染：从renderToString到renderToPipeableStream"
-date: "202406713"
+date: "20240713"
 tags: ["react"]
-
-```
+---
 
 ## **客户端渲染的局限性**
 
