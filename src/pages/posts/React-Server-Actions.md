@@ -20,6 +20,7 @@ Server Actions 主要有如下优点：
 ## **使用Server actions处理表单的提交**
 
 ```jsx
+//actions.js
 'use server';
 
 export async function updateName(formData) {
@@ -29,9 +30,12 @@ export async function updateName(formData) {
 	  }
 	  await db.users.updateName(username);
 	}
-```
+```  
+
 
 ```jsx
+//app.js
+
 // Server Component
 
 import { updateName } from './actions'

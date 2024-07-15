@@ -120,7 +120,7 @@ client端的代码，可以使用任意的打包工具进行处理，打包完�
 
 我们吧这个文件添加到server.js中：
 
-```jsx
+```diff jsx
   res.send(`
     <!DOCTYPE html>
     <html>
@@ -130,8 +130,8 @@ client端的代码，可以使用任意的打包工具进行处理，打包完�
       <body>
         <!-- Injecting the rendered App component -->
         <div id="root">${html}</div>
-        <!-- 这里是打包过的js文件 -->
-        <script type="module" src="/main.js"></script>
++        <!-- 这里是打包过的js文件 -->
++        <script type="module" src="/main.js"></script>
       </body>
     </html>
   `);

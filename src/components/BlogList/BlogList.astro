@@ -1,6 +1,8 @@
 ---
 import PostList from '../PostList/PostList.astro';
-const allPosts = await Astro.glob('../../pages/posts/*.md');
+// const allPosts = await Astro.glob('../../pages/posts/*.md');
+// concat with *.mdx file
+const allPosts = await Astro.glob('../../pages/posts/*.{md,mdx}');
 ---
 
 <PostList items={allPosts} title="Blog" />
