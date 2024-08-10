@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Blog.astro
-title: "实现一个简单的骨架屏
-date: "20240806"
+title: "实现一个简单的骨架屏"
+date: "20240606"
 tags: ["css"]
 ---
 
